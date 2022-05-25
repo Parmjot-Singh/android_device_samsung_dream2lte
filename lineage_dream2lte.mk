@@ -16,14 +16,14 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit from dream2lte device
 $(call inherit-product, device/samsung/dream2lte/device.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Halium stuff.
+$(call inherit-product, vendor/halium/config/halium.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := dream2lte
@@ -37,6 +37,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=dream2ltexx \
-    PRIVATE_BUILD_DESC="dream2ltexx-user 8.0.0 R16NW G955FXXU1CRC7 release-keys"
+    PRIVATE_BUILD_DESC="dream2ltexx-user 10 R16NW G955FXXU1CRC7 release-keys"
 
-BUILD_FINGERPRINT := samsung/dream2ltexx/dream2lte:8.0.0/R16NW/G955FXXU1CRC7:user/release-keys
+BUILD_FINGERPRINT := samsung/dream2ltexx/dream2lte:10/R16NW/G955FXXU1CRC7:user/release-keys
